@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#152034">
+  <meta name="description" content="The MogobTraker privacy policy explains local ledger storage, device backups, data deletion, and support communications.">
+  <title>MogobTraker Privacy Policy</title>
+  <link rel="canonical" href="https://gitchen666.github.io/MogobTraker/">
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #152034;
+      --navy-deep: #0d1627;
+      --lime: #d9f986;
+      --white: #fff;
+      --paper: #f7f8f4;
+      --text: #1c293e;
+      --muted: #46556b;
+      --rule: #dce3da;
+      --link: #254d37;
+      --heading: "Barlow Condensed", "Bahnschrift", "Arial Narrow", sans-serif;
+      --body: "Atkinson Hyperlegible Next", "Segoe UI", sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { background: var(--paper); }
+    body {
+      margin: 0;
+      color: var(--text);
+      font: 1rem/1.7 var(--body);
+    }
+
+    a { color: var(--link); text-underline-offset: .23em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 4px;
+      border-radius: .15rem;
+    }
+
+    .frame {
+      width: min(67rem, calc(100% - clamp(2.5rem, 8vw, 6rem)));
+      margin-inline: auto;
+    }
+    .skip {
+      position: fixed;
+      z-index: 2;
+      top: .5rem;
+      left: .5rem;
+      padding: .5rem .8rem;
+      transform: translateY(-150%);
+      background: var(--white);
+    }
+    .skip:focus { transform: translateY(0); }
+
+    .hero {
+      background: var(--navy);
+      color: var(--white);
+      border-bottom: .3rem solid var(--lime);
+    }
+    .hero a { color: var(--lime); }
+    .masthead {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      min-height: 4.7rem;
+      border-bottom: 1px solid #ffffff36;
+      font-weight: 700;
+      letter-spacing: .015em;
+    }
+    .mark {
+      display: grid;
+      align-items: end;
+      grid-template-columns: repeat(3, .17rem);
+      gap: .15rem;
+      padding: .44rem;
+      border: 1px solid #d9f9867a;
+      border-radius: .24rem;
+      color: var(--lime);
+    }
+    .mark i { display: block; background: currentColor; }
+    .mark i:nth-child(1) { height: .32rem; }
+    .mark i:nth-child(2) { height: .52rem; }
+    .mark i:nth-child(3) { height: .72rem; }
+
+    .headline {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 17rem);
+      align-items: end;
+      gap: clamp(1.75rem, 6vw, 5rem);
+      padding-block: clamp(3.1rem, 9vw, 7rem) clamp(2.7rem, 7vw, 5.4rem);
+    }
+    h1, h2 { margin: 0; font-family: var(--heading); }
+    h1 {
+      max-width: 8ch;
+      font-size: clamp(3.2rem, 8vw, 7.5rem);
+      font-weight: 700;
+      letter-spacing: -.06em;
+      line-height: .96;
+    }
+    .facts {
+      margin: 0;
+      padding: 1rem 1.2rem;
+      border-left: .2rem solid var(--lime);
+      background: var(--navy-deep);
+      font-size: .9rem;
+      overflow-wrap: anywhere;
+    }
+    .facts p { margin: 0; }
+    .facts p + p { margin-top: .28rem; }
+    .facts time { color: var(--lime); }
+
+    .contents {
+      padding-block: clamp(1.7rem, 4vw, 3rem);
+      border-bottom: 1px solid var(--rule);
+    }
+    .contents h2 {
+      margin: 0 0 .7rem;
+      font: 700 .9rem/1.5 var(--body);
+    }
+    .contents ul {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .35rem 1.6rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .contents a {
+      display: inline-block;
+      padding-block: .35rem;
+      font-size: .92rem;
+      line-height: 1.45;
+    }
+
+    .policy { padding-bottom: clamp(2.75rem, 7vw, 5rem); }
+    .policy section {
+      display: grid;
+      grid-template-columns: minmax(0, 17rem) minmax(0, 1fr);
+      align-items: start;
+      gap: .7rem clamp(1.7rem, 5vw, 5rem);
+      padding-block: clamp(1.75rem, 4vw, 2.8rem);
+      border-bottom: 1px solid var(--rule);
+      scroll-margin-top: 1.5rem;
+    }
+    .policy section:target h2 { color: var(--link); text-decoration: underline; text-underline-offset: .24em; }
+    .policy h2 {
+      font-size: clamp(1.35rem, 2.3vw, 1.85rem);
+      font-weight: 650;
+      letter-spacing: -.028em;
+      line-height: 1.2;
+    }
+    .section-text {
+      max-width: 66ch;
+      color: var(--muted);
+      overflow-wrap: anywhere;
+    }
+    .section-text p { margin: 0; }
+    .section-text p + p { margin-top: 1rem; }
+
+    @media (max-width: 48rem) {
+      .headline { grid-template-columns: minmax(0, 1fr) minmax(0, 15rem); }
+      .contents ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .policy section { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    @media (max-width: 35rem) {
+      .headline { grid-template-columns: minmax(0, 1fr); }
+      .facts { width: 100%; }
+      .contents ul { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    @media print {
+      html, .hero, .facts { background: var(--white); color: #000; }
+      .hero, .masthead { border-color: #bbb; }
+      .hero a, .facts time { color: #000; }
+      .frame { width: 100%; }
+      .skip, .contents, .mark { display: none; }
+      .headline, .policy section { display: block; padding-block: .7rem; }
+      h1 { max-width: none; font-size: 32pt; }
+      .facts { padding-inline: 0; border: 0; }
+      .policy h2 { margin-bottom: .3rem; break-after: avoid; }
+      .section-text { max-width: none; color: #000; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="hero">
+    <div class="frame">
+      <div class="masthead"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>MogobTraker</div>
+      <div class="headline">
+        <h1>Privacy Policy</h1>
+        <div class="facts">
+          <p>Last updated: <time datetime="2026-11-09">November 9, 2026</time></p>
+          <p>Developer: MogobTraker</p>
+          <p>App: MogobTraker</p>
+          <p>Contact: <a href="mailto:tranthanhnhan7893@icloud.com">tranthanhnhan7893@icloud.com</a></p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="frame" id="main">
+    <nav class="contents" aria-labelledby="contents-title">
+      <h2 id="contents-title">On this page</h2>
+      <ul>
+        <li><a href="#scope">1. Scope</a></li>
+        <li><a href="#information-stored-in-your-ledger">2. Information stored in your ledger</a></li>
+        <li><a href="#advertising-tracking-and-permissions">3. Advertising, tracking, and permissions</a></li>
+        <li><a href="#device-storage-backups-and-security">4. Device storage, backups, and security</a></li>
+        <li><a href="#retention-and-deletion">5. Retention and deletion</a></li>
+        <li><a href="#information-you-send-for-support">6. Information you send for support</a></li>
+        <li><a href="#apple-services-and-diagnostics">7. Apple services and diagnostics</a></li>
+        <li><a href="#your-choices-and-childrens-information">8. Your choices and children&#39;s information</a></li>
+        <li><a href="#changes-and-contact">9. Changes and contact</a></li>
+      </ul>
+    </nav>
+    <article class="policy" aria-label="MogobTraker Privacy Policy">
+      <section id="scope" aria-labelledby="scope-title">
+        <h2 id="scope-title">1. Scope</h2>
+        <div class="section-text">
+          <p>This Privacy Policy explains how MogobTraker handles information when you use the app or contact the developer. MogobTraker is an offline personal ledger. You do not need to create an account or connect a bank account to use it.</p>
+        </div>
+      </section>
+      <section id="information-stored-in-your-ledger" aria-labelledby="information-stored-in-your-ledger-title">
+        <h2 id="information-stored-in-your-ledger-title">2. Information stored in your ledger</h2>
+        <div class="section-text">
+          <p>You may enter transaction amounts, income or expense categories, dates, and notes. The app also assigns an identifier to each transaction so that you can edit and delete it. This information is processed on your device to display your records, search results, monthly totals, and spending charts.</p>
+          <p>The app does not send your ledger to the developer or to a developer-operated server. The developer cannot remotely access your ledger through the app. Avoid putting bank passwords, payment card security codes, or other unnecessary sensitive information in transaction notes.</p>
+        </div>
+      </section>
+      <section id="advertising-tracking-and-permissions" aria-labelledby="advertising-tracking-and-permissions-title">
+        <h2 id="advertising-tracking-and-permissions-title">3. Advertising, tracking, and permissions</h2>
+        <div class="section-text">
+          <p>The current app does not include advertising, tracking tools, or third-party analytics and crash-reporting SDKs. It does not request access to your location, contacts, camera, microphone, photos, or bank accounts for its ledger features. It does not sell or rent ledger information.</p>
+        </div>
+      </section>
+      <section id="device-storage-backups-and-security" aria-labelledby="device-storage-backups-and-security-title">
+        <h2 id="device-storage-backups-and-security-title">4. Device storage, backups, and security</h2>
+        <div class="section-text">
+          <p>Your ledger is saved in the app&#39;s local storage. The app does not provide its own cloud sync or export service. Depending on your device and backup settings, app data may be included in backups or device transfers handled by Apple or your computer. Those services operate under their own terms and privacy practices; the developer does not control or access those backups through MogobTraker.</p>
+          <p>MogobTraker relies on iOS device protections and does not provide a separate app password, biometric lock, or additional app-level encryption feature. Protect your device with a passcode and review your backup settings. No device or storage method can be guaranteed completely secure or free from data loss.</p>
+        </div>
+      </section>
+      <section id="retention-and-deletion" aria-labelledby="retention-and-deletion-title">
+        <h2 id="retention-and-deletion-title">5. Retention and deletion</h2>
+        <div class="section-text">
+          <p>Ledger entries remain in local app storage until you delete them or remove the app&#39;s data. You can delete an individual transaction or use Settings &gt; Delete All Transactions to clear the active ledger after confirmation. Removing the app from your device normally removes its local data; offloading the app may retain that data.</p>
+          <p>Deleting entries in MogobTraker does not automatically delete earlier device backups or copies outside the app. Manage those copies through the relevant device, computer, or backup service. The developer does not hold a server copy of your ledger and cannot restore deleted records for you.</p>
+        </div>
+      </section>
+      <section id="information-you-send-for-support" aria-labelledby="information-you-send-for-support-title">
+        <h2 id="information-you-send-for-support-title">6. Information you send for support</h2>
+        <div class="section-text">
+          <p>If you choose to email the developer, the developer receives your email address and any message, screenshots, or attachments you send. This information is used to answer your request, investigate reported problems, and maintain necessary support records. Email providers process messages as part of delivering and storing email.</p>
+          <p>Support correspondence is retained only as long as reasonably needed for these purposes or applicable legal requirements. You may ask for access, correction, or deletion of information you provided for support by emailing <a href="mailto:tranthanhnhan7893@icloud.com">tranthanhnhan7893@icloud.com</a>. Requests will be handled as applicable law requires. Do not send your full ledger or sensitive financial details unless they are necessary for your request.</p>
+        </div>
+      </section>
+      <section id="apple-services-and-diagnostics" aria-labelledby="apple-services-and-diagnostics-title">
+        <h2 id="apple-services-and-diagnostics-title">7. Apple services and diagnostics</h2>
+        <div class="section-text">
+          <p>Apple separately operates the App Store, operating system, and related services. Apple may handle installation information, device backups, and diagnostics according to your settings and its own privacy policy. The app does not add a separate analytics service. If you choose to share a diagnostic report with the developer, it will be used to investigate technical problems rather than for advertising or cross-app tracking.</p>
+        </div>
+      </section>
+      <section id="your-choices-and-childrens-information" aria-labelledby="your-choices-and-childrens-information-title">
+        <h2 id="your-choices-and-childrens-information-title">8. Your choices and children&#39;s information</h2>
+        <div class="section-text">
+          <p>You control the information you enter and can review, edit, or delete it in the app. Because the developer does not receive your local ledger, requests about those local records are normally carried out directly on your device. Support-related requests can be sent to the contact address above.</p>
+          <p>MogobTraker does not require an age, birth date, or child profile and does not knowingly collect children&#39;s personal information through the app. If you believe a child has sent personal information to the developer in a support message, contact the developer so the request can be reviewed and the information removed where appropriate.</p>
+        </div>
+      </section>
+      <section id="changes-and-contact" aria-labelledby="changes-and-contact-title">
+        <h2 id="changes-and-contact-title">9. Changes and contact</h2>
+        <div class="section-text">
+          <p>This policy may be updated when the app or its information-handling practices change. The updated policy will show a revised date and be made available in the app. Additional notice or consent will be provided where required by applicable law. This policy does not authorize new collection or uses that require separate permission.</p>
+          <p>For privacy questions, contact MogobTraker at <a href="mailto:tranthanhnhan7893@icloud.com">tranthanhnhan7893@icloud.com</a>.</p>
+        </div>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
